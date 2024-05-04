@@ -1,0 +1,131 @@
+.column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.table-wrapper {
+  opacity: 0.8;
+  z-index: 100;
+  margin-top: 1rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+.table-container {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 95%;
+
+  right: 1rem;
+}
+
+table {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-header-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  padding: 12px;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 14px;
+  white-space: nowrap;
+  color: #191c1f;
+  line-height: 16px;
+}
+
+.responsive-table td {
+  border: 0;
+}
+
+tr {
+  background-color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th,
+tfoot td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: lightskyblue;
+  color: white;
+}
+
+.cell-header {
+  display: none;
+}
+input {
+  border: 1px solid #d2d5da;
+  padding: 4px;
+  max-width: 124px;
+}
+.sort-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .table-container thead tr {
+    display: flex;
+    flex-direction: row;
+  }
+  .table-container tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table-container th {
+    display: flex;
+  }
+  .table-container td {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .table-container .cell-header {
+    display: block;
+    font-weight: bold;
+  }
+}
