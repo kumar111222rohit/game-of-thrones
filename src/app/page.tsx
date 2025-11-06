@@ -9,10 +9,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <Header
-          imgSrc="/static/assets/kramp-logo.svg"
-          tooltipText="Welcome to Kramp"
-        />
+        <Header />
         <Link href="/characters">
           <p className="home-page-btn">
             <Button btnLabel="Click to view assignment" />

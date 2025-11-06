@@ -4,7 +4,7 @@ import { Header } from './Header';
 
 describe('Header Component', () => {
   test('should render header text when provided', () => {
-    const headerText = 'Kramp';
+    const headerText = 'Game of Thrones';
     render(<Header headerText={headerText} />);
     const headerElement = screen.getByTestId('header-text');
     expect(headerElement).toBeInTheDocument();
@@ -12,7 +12,7 @@ describe('Header Component', () => {
   });
 
   test('should render image when img is provided', () => {
-    const imgSrc = '/static/assets/kramp-logo.svg';
+    const imgSrc = '/static/assets/logo.svg';
     const altText = 'game of thrones';
     render(<Header imgSrc={imgSrc} altText={altText} />);
     const image = screen.getByRole('img', { name: altText });
